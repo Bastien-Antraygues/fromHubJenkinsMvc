@@ -6,18 +6,16 @@ public class Personne {
 
     private String nom;
     private String prenom;
-    private LocalDate dateNaissance;
     private int age;
     
     public Personne() {
         
     }
     
-    public Personne(String nom, String prenom, LocalDate dateNaissance, int age) {
+    public Personne(String nom, String prenom,int age) {
         super();
         this.nom = nom;
         this.prenom = prenom;
-        this.dateNaissance = dateNaissance;
         this.age = age;
     }
 
@@ -37,13 +35,7 @@ public class Personne {
         this.prenom = prenom;
     }
 
-    public LocalDate getDateNaissance() {
-        return dateNaissance;
-    }
-
-    public void setDateNaissance(LocalDate dateNaissance) {
-        this.dateNaissance = dateNaissance;
-    }
+   
 
     public int getAge() {
         return age;
@@ -51,6 +43,12 @@ public class Personne {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Personne [nom=" + nom + ", prenom=" + prenom +  ", age=" + age
+                + "]";
     }
     
     
